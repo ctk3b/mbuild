@@ -542,11 +542,14 @@ class Compound(object):
         except KeyError:  # TODO: better reporting
             saver = None
 
-        structure = self.to_parmed(show_ports, **kwargs)
+        structure = self.to_parmed(**kwargs)
         if saver:  # mBuild/InterMol supported saver.
-            return saver(filename, structure, forcefield, **kwargs)
+            saver(filename, structure, forcefield, **kwargs)
+        elif extension == '.xyz':
+            traj = self.to_trajectory(show_ports=show_ports)
+            traj.save(filename)
         else:  # ParmEd supported saver.
-            return structure.save(filename, **kwargs)
+            structure.save(filename, **kwargs)
 
     def save_hoomdxml(self, filename, structure, forcefield, box=None, **kwargs):
         """ """
