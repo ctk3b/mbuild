@@ -22,7 +22,7 @@ after which you can simply install without specifying the channels::
     to manage your numerical and scientific Python packages.
 
 Install an editable version from source
--------------------
+---------------------------------------
 ::
 
     $ git clone https://github.com/mosdef-hub/mbuild

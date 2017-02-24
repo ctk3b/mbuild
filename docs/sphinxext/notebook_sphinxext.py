@@ -24,8 +24,7 @@ def export_html(wd, name):
     config = {
         'Exporter': {'template_file': 'embed',
                      'template_path': ['./sphinxext/']},
-#        'ExecutePreprocessor': {'enabled': True},
-        'ExecutePreprocessor': {'enabled': False},
+        'ExecutePreprocessor': {'enabled': True},
         'ExtractOutputPreprocessor': {'enabled': True},
         'CSSHTMLHeaderPreprocessor': {'enabled': True}
     }
@@ -134,4 +133,3 @@ def setup(app):
                  html=(visit_notebook_node, depart_notebook_node))
 
     app.add_directive('notebook', NotebookDirective)
-    
