@@ -1,3 +1,5 @@
+.. _coordinate_transforms:
+
 ==========================
 Coordinate transformations
 ==========================

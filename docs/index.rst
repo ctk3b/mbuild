@@ -1,5 +1,12 @@
 mBuild
 ======
+
+.. image:: https://badge.fury.io/py/mbuild.svg
+   :target: https://pypi.python.org/pypi/mbuild
+
+.. image:: https://anaconda.org/mosdef/mbuild/badges/version.svg
+   :target: https://anaconda.org/mosdef/mbuild
+
 *A hierarchical, component based molecule builder*
 
 With just a few lines of mBuild code, you can assemble reusable components into
@@ -42,28 +49,24 @@ by adjusting a variable::
 Various sub-portions of this library may be independently distributed under
 different licenses. See those files for their specific terms.
 
+This material is based upon work supported by the National Science Foundation
+under grants NSF CBET-1028374 and NSF ACI-1047828. Any opinions, findings, and
+conclusions or recommendations expressed in this material are those of the
+author(s) and do not necessarily reflect the views of the National Science
+Foundation.
 
 .. toctree::
    :hidden:
 
    installation
-
-.. toctree::
-   :hidden:
-
-   tutorials/tutorials
-
-.. toctree::
-   :hidden:
-
+   tutorials
    data_structures
-
-.. toctree::
-   :hidden:
-
    coordinate_transforms
-
-.. toctree::
-   :hidden:
-
    recipes
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
