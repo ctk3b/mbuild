@@ -75,6 +75,7 @@ class Lattice(object):
     cholesterol was generated.
 
     Replicating the triclinic unit cell out 3 in x,y,z directions.
+
     >>> cholesterol_unit = mb.Compound()
     >>> cholesterol_unit = mb.load(get_fn('cholesterol.pdb'))
     >>> # associate basis vector with id 'cholesterol' to cholesterol Compound
@@ -89,6 +90,7 @@ class Lattice(object):
 
 
     Generating BCC CsCl crystal structure
+
     >>> import mbuild as mb
     >>> chlorine = mb.Compound(name='Cl')
     >>> # angles not needed, when not provided, defaults to 90,90,90
@@ -99,6 +101,7 @@ class Lattice(object):
     ...                           dimension=3)
 
     Now associate id with Compounds for basis atoms and replicate 3x3x3
+
     >>> cscl_dict = {'Cl' : chlorine, 'Cs' : cesium}
     >>> cscl_compound = cscl_lattice.populate(x=3, y=3, z=3,
     ...                                       compound_dict=cscl_dict)
@@ -108,6 +111,7 @@ class Lattice(object):
     input.
 
     Generating FCC Copper cell with lattice_vectors instead of angles
+
     >>> import mbuild as mb
     >>> copper = mb.Compound(name='Cu')
     >>> lattice_vector = ( [1, 0, 0], [0, 1, 0], [0, 0, 1])
@@ -152,8 +156,8 @@ class Lattice(object):
         are provided, basis vectors do not overlap when the unit cell is
         expanded.
 
-        Exceptions Raised
-        -----------------
+        Raises
+        ------
         TypeError : incorrect typing of the input parameters.
 
         ValueError : values are not within restrictions.
@@ -395,14 +399,11 @@ class Lattice(object):
         compound_dict : dictionary, optional, default=None
             Link between basis_dict and Compounds.
 
-        Exceptions Raised
-        -----------------
+        Raises
+        ------
         ValueError : incorrect x,y, or z values.
         TypeError : incorrect type for basis vector
 
-        Call Restrictions
-        -----------------
-        Called after constructor by user.
         """
         if self.dimension == 3:
             a = self.lattice_spacings[0]
