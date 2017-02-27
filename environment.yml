@@ -1,7 +1,6 @@
 name: test-environment
 channels:
 - mosdef
-- glotzer
 - bioconda
 - janschulz
 - omnia
@@ -19,7 +18,6 @@ dependencies:
 - pytest >=3.0
 - jupyter
 - nbformat
-- ipykernel
 - ipyext
 - python-coveralls
 - pytest-cov
