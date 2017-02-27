@@ -4,6 +4,11 @@
 Installation
 ============
 
+To make your life easier, we recommend that you use a pre-packaged Python
+distribution like `Continuum's Anaconda <https://store.continuum.io/>`_
+in order to get all of the dependencies.
+
+
 Install with `conda <http://continuum.io/downloads>`_
 -----------------------------------------------------
 ::
@@ -30,10 +35,6 @@ Install an editable version from source
     $ git clone https://github.com/mosdef-hub/mbuild
     $ cd mbuild
     $ pip install -e .
-
-To make your life easier, we recommend that you use a pre-packaged Python
-distribution like `Continuum's Anaconda <https://store.continuum.io/>`_
-in order to get all of the dependencies.
 
 Testing your installation
 -------------------------
